@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/JasurbekYuldashov/uzads_bot/issues"
   },
-  "homepage": "https://github.com/JasurbekYuldashov/uzads_bot#readme"
+  "homepage": "https://github.com/JasurbekYuldashov/uzads_bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "telegrafjs": "^0.1.3"
+  }
 }
