@@ -6,7 +6,7 @@ const { House } = require("../actions/e'lonlar/House")
 const { Phone } = require("../actions/e'lonlar/Phone")
 const { Wacht } = require("../actions/e'lonlar/wacht");
 const { Other } = require("./e'lonlar/Other");
-const { checkMember } = require("../components/CheckMember");
+// const { checkMember } = require("../components/CheckMember");
 const {Markup} = require("telegraf")
 
 let bool1 = []
@@ -139,15 +139,15 @@ function sendAction(action, ctx) {
 bot.on("callback_query", ctx => {
     if (ctx.update.callback_query) {
         if (ctx.update.callback_query.data === "allaqachonazoboldim") {
-            if (!checkMember(ctx, false)) {
+            // if (!checkMember(ctx, false)) {
                 if (ctx.update.message) {
                     sendAction(ctx.update.message.text, ctx)
                 } else {
                     isBoolChecked(ctx)
                 }
-            } else {
-                return 0;
-            }
+            // } else {
+            //     return 0;
+            // }
         }
     }
     if (ctx.update.message) {
@@ -164,11 +164,11 @@ bot.on("message", ctx => {
         ctx.telegram.sendMessage(ctx.from.id,"Kearkli buruqni tanlang!!!",{reply_markup:keyboard})
         return 0;
     }
-    if (ctx.update.message.text !== "/start") {
-        if (!checkMember(ctx, true)) {
-            return 0;
-        }
-    }
+    // if (ctx.update.message.text !== "/start") {
+    //     if (!checkMember(ctx, true)) {
+    //         return 0;
+    //     }
+    // }
     if (ctx.update.message.text) {
         sendAction(ctx.update.message.text, ctx)
     } else {
