@@ -1,7 +1,7 @@
 const compression = require("compression")
 const express = require("express")
 require("dotenv").config()
-
+require("./actions")
 
 const app = express()
 const port = 8080
