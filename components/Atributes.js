@@ -56,7 +56,7 @@ async function checkTextType(ctx) {
 }
 
 function isFail(ctx) {
-	console.log("Failed")
+	ctx.telegram.sendMessage(ctx.from.id, fail)
 }
 
 async function Atributes(ctx, questions, hashtag) {
