@@ -158,6 +158,12 @@ bot.on("callback_query", ctx => {
 })
 
 bot.on("message", ctx => {
+	if (ctx.update.message.text === "🔙 orqaga") {
+		let keyboard = Categories.map(c => Markup.button(c.type))
+		keyboard = Markup.keyboard([...keyboard], { columns: 2 }).resize()
+		ctx.telegram.sendMessage(ctx.from.id,"Kearkli buruqni tanlang!!!",{reply_markup:keyboard})
+		return 0;
+	}
 	if (ctx.update.message.text !== "/start") {
 		if (!checkMember(ctx, true)) {
 			return 0;
