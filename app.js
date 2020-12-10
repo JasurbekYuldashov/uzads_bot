@@ -4,7 +4,7 @@ require("dotenv").config()
 require("./actions")
 
 const app = express()
-const port = 8080
+const port = process.env.PORT
 
 
 app.use(compression())
