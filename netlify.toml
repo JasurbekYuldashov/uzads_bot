@@ -1,5 +1,7 @@
 [context.production]
-  command = "node index.js"
+  command = "npm start"
+  framework = "#custom"
+  
 
 [dev]
   command = "npm start"
