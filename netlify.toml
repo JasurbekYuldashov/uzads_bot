@@ -1,7 +1,9 @@
 [context.production]
   command = "npm start"
   framework = "#custom"
-  
+
+[context.deploy-preview]
+  command = "npm start"
 
 [dev]
   command = "npm start"
