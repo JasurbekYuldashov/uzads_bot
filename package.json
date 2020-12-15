@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "rm -rf node_modules package-lock.json && npm install && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
