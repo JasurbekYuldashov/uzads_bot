@@ -1,6 +1,5 @@
 [context.production]
   command = "npm start"
-  environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "8.0.1" }
 
 [dev]
   command = "npm start"
