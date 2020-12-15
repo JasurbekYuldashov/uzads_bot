@@ -4,7 +4,7 @@ require("dotenv").config()
 require("./actions")
 
 const app = express()
-const port = process.env.port
+const port = process.env.PORT || 5000
 
 
 app.use(compression())
@@ -15,6 +15,8 @@ app.get('/', (req, res) => {
 
 })
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`)
 })
+
+module.exports = server
