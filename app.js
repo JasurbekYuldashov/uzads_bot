@@ -1,7 +1,7 @@
 const compression = require("compression")
 const express = require("express")
 require("dotenv").config()
-require("./actions")
+require("./actions/main")
 
 const app = express()
 const port = process.env.PORT || 5000

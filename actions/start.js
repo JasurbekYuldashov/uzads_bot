@@ -1,5 +1,5 @@
 const { Markup } = require("telegraf")
-const { bot } = require("../bot")
+const { bot } = require("../bot/botmain")
 const { checkMember } = require("../components/CheckMember")
 const { Categories } = require("../constants/categories")
 

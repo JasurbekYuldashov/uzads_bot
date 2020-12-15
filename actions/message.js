@@ -1,4 +1,4 @@
-const { bot } = require("../bot");
+const { bot } = require("../bot/botmain");
 const { Categories } = require("../constants/categories");
 const { Car } = require("../actions/e'lonlar/Car")
 const { Comp } = require("../actions/e'lonlar/comp")
